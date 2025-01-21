@@ -10,8 +10,6 @@ class Queue {
 private:
 //    T   array[MAXN];
     T *array;
-    int first;
-    int last;
     int number_of_items;
     int current_length;
 
@@ -26,8 +24,6 @@ public:
 // The implementation of queue
 template <class T>
 Queue<T>::Queue() {
-    first = 0;
-    last = -1;
 	number_of_items = 0;
     current_length = MAXN;
     array = new T[current_length];
