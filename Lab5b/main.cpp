@@ -1,11 +1,12 @@
 /* simple test program to test the queue implementation */
 #include <iostream>
-#include "queue.h"
+//#include "queue.h"
+#include "circ_arr.h"
 #include <stdlib.h>
 #include <time.h>
 
-#define N 100000 // number of elements inserted/retrieved from the queue, must be even
-//#define N 10 // number of elements inserted/retrieved from the queue, must be even
+//#define N 100000 // number of elements inserted/retrieved from the queue, must be even
+#define N 100 // number of elements inserted/retrieved from the queue, must be even
 using namespace std;
 
 

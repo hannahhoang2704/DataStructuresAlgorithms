@@ -51,14 +51,15 @@ void Queue<Titem>::expand() {
 
 template <class Titem>
 bool Queue<Titem>::enqueue(Titem item) {
-    if (number_of_items >= capacity)
+    if (number_of_items == capacity){
         expand();
-    else {
-        last = (last+1)%capacity;
-        array[last] = item;
-        number_of_items++;
-        return (true);
     }
+
+    last = (last+1)%capacity;
+    array[last] = item;
+    number_of_items++;
+
+    return (true);
 }
 template <class Titem>
 bool Queue<Titem>::dequeue(Titem &item) {
@@ -75,8 +76,9 @@ template <class Titem>
 void Queue<Titem>::print() {
     int i, n;
     cout << "\nQueue now: \n\n";
-    for (n = 1, i=first; n <= number_of_items ; n++) {
-        cout << " " << array[i] << " "; i++;
+    for (n = 0, i=first; n < number_of_items ; n++) {
+        cout << " " << array[i] << " ";
+        i = (i+1)%capacity;
     }
     cout << endl << endl;
 }
