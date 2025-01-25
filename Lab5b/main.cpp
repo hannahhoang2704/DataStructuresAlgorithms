@@ -5,8 +5,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-//#define N 100000 // number of elements inserted/retrieved from the queue, must be even
-#define N 100 // number of elements inserted/retrieved from the queue, must be even
+#define N 100000 // number of elements inserted/retrieved from the queue, must be even
+//#define N 100 // number of elements inserted/retrieved from the queue, must be even
 using namespace std;
 
 
