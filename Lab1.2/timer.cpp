@@ -4,9 +4,7 @@
 #include "timer.h"
 
 std::ostream &operator<<(std::ostream &stream, const Time &time) {
-  stream << std::setfill('0') << std::setw(2) << time.hours;
-  std::cout << ":" << std::setfill('0') << std::setw(2) << time.minutes
-            << std::endl;
+  stream << std::setfill('0') << std::setw(2) << time.hours << ":" << std::setfill('0') << std::setw(2) << time.minutes<< std::endl;
   return stream;
 }
 
